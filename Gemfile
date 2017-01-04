@@ -7,6 +7,7 @@ end
 
 gem 'rails', '5.0.1'
 
+gem 'gepub'
 gem 'haml'
 gem 'jbuilder'
 gem 'mysql2'
