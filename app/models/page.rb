@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 class Page < ApplicationRecord
+  belongs_to :magazine
+
   has_attached_file :content
   validates_attachment :content,
                        presence: true,

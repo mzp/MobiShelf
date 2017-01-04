@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170104012725) do
+ActiveRecord::Schema.define(version: 20170104023029) do
+
+  create_table "magazines", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "pages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "no"
@@ -20,6 +26,8 @@ ActiveRecord::Schema.define(version: 20170104012725) do
     t.string   "content_content_type"
     t.integer  "content_file_size"
     t.datetime "content_updated_at"
+    t.integer  "magazine_id"
+    t.index ["magazine_id"], name: "index_pages_on_magazine_id", using: :btree
   end
 
 end
