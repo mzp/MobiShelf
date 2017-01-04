@@ -7,6 +7,9 @@ require 'rspec/rails'
 
 ActiveRecord::Migration.maintain_test_schema!
 
+Paperclip::Attachment.default_options[:path] =
+  ':rails_root/public/test/:class/:attachment/:id_partition/:filename'
+
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
