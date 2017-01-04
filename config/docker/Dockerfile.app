@@ -4,7 +4,7 @@ WORKDIR /tmp
 
 RUN apt-get update
 
-RUN apt-get install -y build-essential curl git libssl-dev libreadline-dev zlib1g-dev libmysqlclient-dev
+RUN apt-get install -y build-essential curl git libssl-dev libreadline-dev zlib1g-dev libmysqlclient-dev file
 
 ARG ruby_version
 
