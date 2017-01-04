@@ -7,10 +7,11 @@ end
 
 gem 'rails', '5.0.1'
 
+gem 'haml'
 gem 'jbuilder'
 gem 'mysql2'
+gem 'paperclip'
 gem 'puma'
-gem 'haml'
 
 group :development, :test do
   gem 'byebug'
