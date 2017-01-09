@@ -1,9 +1,12 @@
+machine:
+  ruby:
+    version:
+      ruby-2.3.1
 test:
-  post:
-    - >
-      bundle update
+  override:
+    - bundle update
 deployment:
   auto-bundle-update:
+    branch: circleci
     commands:
-      - >
-        ./bin/circleci/create-pr
+      - ./bin/circleci/create-pr
