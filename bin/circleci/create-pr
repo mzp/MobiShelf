@@ -1,0 +1,10 @@
+#!/bin/bash
+export BRANCH=bundle-update-`date -u "+%Y%m%d"`
+if [ -n `git status -sb 2> /dev/null | grep Gemfile.lock` ] ; then
+  git config --global user.email bot@mzp.jp
+  git config --global user.name 'bundle update'
+  git add Gemfile.lock
+  git commit -m 'Bundle update'
+  git branch -M $BRANCH
+  git push origin $BRANCH
+fi
