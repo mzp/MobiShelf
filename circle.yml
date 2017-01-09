@@ -1,0 +1,18 @@
+machine:
+  ruby:
+    version:
+      ruby-2.4.0
+  post:
+        - curl -o- -L https://yarnpkg.com/install.sh | bash
+database:
+  override:
+    - echo skip
+test:
+  override:
+    - bundle update
+    - yarn upgrade --ignore-engines
+deployment:
+  auto-bundle-update:
+    branch: circleci
+    commands:
+      - ./bin/circleci/create-pr

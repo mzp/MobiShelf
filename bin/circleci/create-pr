@@ -1,0 +1,13 @@
+#!/bin/bash
+export BRANCH=bundle-update-`date -u "+%Y%m%d"`
+if [ ! `git diff --exit-code --quiet` ]; then
+  git config --global user.email bot@mzp.jp
+  git config --global user.name 'bundle update'
+  git commit -m 'Bundle update' Gemfile.lock
+  git commit -m 'yarn upgrade' yarn.lock
+  git branch -M $BRANCH
+  git push origin $BRANCH
+  curl -q -H "Authorization: token ${GITHUB_ACCESS_TOKEN}" \
+    -d "{\"title\":\"${BRANCH}\", \"body\":\"SSIA\", \"head\":\"${BRANCH}\", \"base\":\"master\"}" \
+    https://api.github.com/repos/mzp/fumifumi/pulls
+fi
