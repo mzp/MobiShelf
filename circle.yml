@@ -2,6 +2,8 @@ machine:
   ruby:
     version:
       ruby-2.4.0
+database:
+  override: []
 test:
   override:
     - bundle update
