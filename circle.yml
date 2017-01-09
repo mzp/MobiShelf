@@ -3,7 +3,8 @@ machine:
     version:
       ruby-2.4.0
 database:
-  override: []
+  override:
+    - echo skip
 test:
   override:
     - bundle update
