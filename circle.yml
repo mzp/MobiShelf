@@ -1,0 +1,9 @@
+test:
+  post:
+    - >
+      bundle update
+deployment:
+  auto-bundle-update:
+    commands:
+      - >
+        ./bin/circleci/create-pr
