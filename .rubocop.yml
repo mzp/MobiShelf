@@ -8,6 +8,11 @@ AllCops:
     - 'db/migrate/**/*'
     - 'db/schema.rb'
 
+Metrics/BlockLength:
+  Exclude:
+    - config/**/*.rb
+    - spec/**/*.rb
+
 Metrics/LineLength:
   AllowURI: true
     - http
