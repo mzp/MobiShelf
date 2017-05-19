@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/brynary/rack-test.git
-  revision: 3a69fc240d3920bcd4cbfea5ba3b9dee2d24efd9
+  revision: 2b23d2a67ab11e3565a2adf51c9cef748f9243ed
   specs:
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -66,7 +66,7 @@ GEM
     bindex (0.5.0)
     builder (3.2.3)
     byebug (9.0.6)
-    climate_control (0.1.0)
+    climate_control (0.2.0)
     cocaine (0.5.8)
       climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.1)
@@ -108,7 +108,7 @@ GEM
       haml (>= 4.0.6, < 5.0)
       html2haml (>= 1.0.1)
       railties (>= 4.0.1)
-    haml_lint (0.24.0)
+    haml_lint (0.25.1)
       haml (>= 4.0, < 5.1)
       rainbow
       rake (>= 10, < 13)
@@ -121,9 +121,9 @@ GEM
       nokogiri (>= 1.6.0)
       ruby_parser (~> 3.5)
     i18n (0.8.1)
-    jbuilder (2.6.3)
-      activesupport (>= 3.0.0, < 5.2)
-      multi_json (~> 1.2)
+    jbuilder (2.6.4)
+      activesupport (>= 3.0.0)
+      multi_json (>= 1.2)
     json_spec (1.1.5)
       multi_json (~> 1.0)
       rspec (>= 2.0, < 4.0)
@@ -153,7 +153,7 @@ GEM
     mime-types-data (3.2016.0521)
     mimemagic (0.3.2)
     mini_portile2 (2.1.0)
-    minitest (5.10.1)
+    minitest (5.10.2)
     multi_json (1.12.1)
     multipart-post (2.0.0)
     mysql2 (0.4.6)
@@ -168,7 +168,7 @@ GEM
       method_source (~> 0.8.1)
       slop (~> 3.4)
     puma (3.8.2)
-    rack (2.0.1)
+    rack (2.0.2)
     rack-protection (2.0.0)
       rack
     rails (5.0.1)
@@ -187,9 +187,9 @@ GEM
       actionpack (~> 5.x)
       actionview (~> 5.x)
       activesupport (~> 5.x)
-    rails-dom-testing (2.0.2)
-      activesupport (>= 4.2.0, < 6.0)
-      nokogiri (~> 1.6)
+    rails-dom-testing (2.0.3)
+      activesupport (>= 4.2.0)
+      nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
     railties (5.0.1)
@@ -266,7 +266,7 @@ GEM
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
     unicode-display_width (1.2.1)
-    web-console (3.5.0)
+    web-console (3.5.1)
       actionview (>= 5.0)
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
